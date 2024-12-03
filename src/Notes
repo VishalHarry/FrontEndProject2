@@ -1,0 +1,6 @@
+instal chakra-ui -->  npm i @chakra-ui/react @emotion/react @emotion/react @emotion/styled framer-motion
+intall axios
+intall react-router-dom
+intall chat.js
+intall react-chartjs-2
+intall react-icons
