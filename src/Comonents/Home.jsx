@@ -1,29 +1,47 @@
 import React from "react";
-import banner from '../assets/banner2.jpg'
-import img1 from '../assets/image1.jpg'
-import img2 from '../assets/image2.avif'
-import img3 from '../assets/image3.jpeg'
-import img4 from '../assets/image4.jpg'
+import banner from "../assets/banner2.jpg";
+import img1 from "../assets/image1.jpg";
+import img2 from "../assets/image2.avif";
+import img3 from "../assets/image3.jpeg";
+import img4 from "../assets/image4.jpg";
+import { Link } from "react-router-dom";
 
 function Home() {
   return (
     <div className="bg-gray-900 text-white font-sans">
       {/* Hero Section */}
-      <header className="relative">
-        <div className="relative w-full h-screen">
+      <header className="relative bg-gradient-to-b from-gray-900 via-gray-800 to-gray-900 text-white">
+        <div className="relative w-full h-screen flex items-center justify-center overflow-hidden">
+          {/* Background Image */}
           <img
             src={banner}
             alt="Cryptocurrency Background"
-            className="absolute inset-0 w-full h-full object-cover opacity-100 blur-sm"
+            className="absolute inset-0 w-full h-full object-cover opacity-60"
           />
-          <div className="absolute inset-0 flex flex-col items-center justify-center text-center px-6">
-            <h1 className="text-5xl sm:text-6xl md:text-7xl font-extrabold text-[#ff8800] mb-4">
-              Your ₿itcoins Hub
+          {/* Overlay Gradient */}
+          <div className="absolute inset-0 bg-gradient-to-b from-transparent to-gray-900 opacity-80"></div>
+
+          {/* Content */}
+          <div className="relative z-10 text-center px-6">
+            <h1 className="text-4xl sm:text-5xl md:text-6xl font-extrabold text-white animate-pulse">
+              Welcome to <span className="text-[#ff8800]">CryptoZone</span>
             </h1>
-            <p className="text-lg sm:text-xl md:text-2xl text-white/80 max-w-2xl">
-              Explore the secure and innovative world of digital currencies. 
-              Stay informed, invest wisely, and embrace the future.
+            <p className="text-md sm:text-lg md:text-xl text-white/70 mt-4 max-w-3xl mx-auto">
+              Discover the cutting-edge world of cryptocurrencies. Manage, trade, and
+              learn all in one place. Your journey to the future starts here.
             </p>
+            <div className="mt-6 flex flex-col sm:flex-row sm:justify-center gap-4">
+              <button className="bg-[#ff8800] text-black px-6 py-3 rounded-md font-semibold hover:bg-[#e66f00] transition">
+             Get Start
+              </button>
+              {/* "Learn More" Button */}
+              <a
+                href="#about"
+                className="bg-transparent border border-[#ff8800] text-[#ff8800] px-6 py-3 rounded-md font-semibold hover:bg-[#ff8800] hover:text-black transition"
+              >
+                Learn More
+              </a>
+            </div>
           </div>
         </div>
       </header>
@@ -73,10 +91,28 @@ function Home() {
         </div>
       </section>
 
+      {/* About Section */}
+      <section id="about" className="py-16 bg-gray-900">
+        <div className="container mx-auto px-6 text-center">
+          <h2 className="text-3xl sm:text-4xl font-bold text-[#ff8800] mb-6">
+            About CryptoZone
+          </h2>
+          <p className="text-gray-400 max-w-4xl mx-auto">
+            CryptoZone is your ultimate gateway to the world of digital currencies. 
+            Whether you're a beginner exploring cryptocurrency for the first time 
+            or a seasoned investor looking for advanced tools, we have you covered. 
+            With a focus on security, innovation, and user experience, we aim to empower 
+            you to make informed decisions in the dynamic world of cryptocurrencies.
+          </p>
+        </div>
+      </section>
+
       {/* Statistics Section */}
       <section className="py-16 bg-gray-900">
         <div className="container mx-auto px-6 text-center">
-          <h2 className="text-3xl sm:text-4xl font-bold text-[#ff8800] mb-6">Why Choose Us?</h2>
+          <h2 className="text-3xl sm:text-4xl font-bold text-[#ff8800] mb-6">
+            Why Choose Us?
+          </h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8 text-center">
             <div>
               <h3 className="text-4xl font-extrabold text-white">1M+</h3>
